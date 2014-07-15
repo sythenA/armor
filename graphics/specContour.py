@@ -1,4 +1,4 @@
-import pickle
+
 import matplotlib.pyplot as plt
 import numpy as np
 import math
@@ -181,10 +181,3 @@ def specContour(XYZ, XYZ2=None, **kwargs):
         plt.show(block=False)
     else:
         plt.close()
-
-
-if __name__ == '__main__':
-    aa = pickle.load(open('aa.pydump', 'r'))
-    bb = pickle.load(open('bb.pydump', 'r'))
-
-    specContour(aa, show=True, random_cmap=True)
