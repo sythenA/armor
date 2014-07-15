@@ -127,10 +127,10 @@ def specContour(XYZ, XYZ2=None, **kwargs):
             except(KeyError):
                 cmap = plt.cm.coolwarm
 
-        CS3 = plt.contourf(X, Y, Z3, 20, cmap=cmap, origin='lower')
+        CS3 = plt.contourf(X, Y, Z3, 20, cmap=cmap, origin='lower', alpha=0.7)
         CS4 = plt.contour(CS3, levels=CS3.levels[::4], colors='w',
                     origin='lower', hold='on', alpha=0.6, inline=1,
-                    fontsize=10)
+                    fontsize=10, alpha=0.4)
         plt.semilogx(Y, basex=2, visible=False)
 
         diver = make_axes_locatable(plt.gca())
